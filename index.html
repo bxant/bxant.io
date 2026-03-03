@@ -63,6 +63,43 @@
             text-decoration: underline;
         }
 
+        /* ── ABOUT ME ── */
+        .about-section {
+            margin: 40px 0 10px 0;
+            padding: 36px 40px;
+            background: linear-gradient(135deg, #f8fbff 0%, #e6f3ff 100%);
+            border: 2px solid #0064A4;
+            border-radius: 8px;
+        }
+
+        .about-section h2 {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: #0064A4;
+            border-bottom: 2px solid #FFD200;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            color: #444;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-placeholder {
+            color: #888;
+            font-style: italic;
+            border-left: 3px solid #FFD200;
+            padding-left: 14px;
+            margin-bottom: 16px;
+        }
+
+        /* ── PATHWAYS ── */
         .pathway-section {
             margin: 40px 0;
         }
@@ -181,6 +218,13 @@
             margin-top: 10px;
         }
 
+        .job-description p.sub-desc {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
         .job-description ul {
             list-style-type: none;
             padding-left: 0;
@@ -284,7 +328,6 @@
             margin-bottom: 10px;
         }
 
-        /* Philosophical Section Styles */
         .philosophical-content {
             line-height: 1.8;
         }
@@ -351,7 +394,6 @@
             margin-bottom: 20px;
         }
 
-        /* Mobile Responsive */
         @media (max-width: 768px) {
             .pathways {
                 grid-template-columns: 1fr;
@@ -375,6 +417,10 @@
             .tech-skills, .research-areas {
                 grid-template-columns: 1fr;
             }
+
+            .about-section {
+                padding: 24px 20px;
+            }
         }
     </style>
 </head>
@@ -384,7 +430,7 @@
             <h1>Bryant Flores</h1>
             <p class="subtitle">Software Engineer & Independent Scholar</p>
             <div class="contact-info">
-                <p>Irvine, CA | bryant.flores.07@gmail.com | 323-365-4865</p>
+                <p>Irvine, CA | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dcbeaea5bdb2a8f2bab0b3aeb9aff2eceb9cbbb1bdb5b0f2bfb3b1">[email&#160;protected]</a> | 323-365-4865</p>
                 <p>
                     <a href="https://github.com/bxant" target="_blank">GitHub</a> |
                     <a href="https://www.linkedin.com/in/bryant-flores-9510b61bb/" target="_blank">LinkedIn</a>
@@ -393,10 +439,27 @@
         </header>
 
         <div class="pathway-section" id="home">
+
+            <!-- ABOUT ME -->
+            <div class="about-section">
+                <h2>About Me</h2>
+                <!-- Replace the placeholder paragraphs below with your own words. 
+                     The structure is ready — just swap the text. -->
+                <p>Hello, my name is Bryant Flores. I am a first generation Mexican-American professional who grew up in East Los Angeles. I graduated in 2021 with a Bachelor of Science in Computer Science with a specialization in Information from the University of California Irvine. I am a father to three cats and their names are Mochi, Luna, and Kiko (short for Federico). During my free time, you can find me hiking the beautiful mountains of California, camping, and spending time looking at the Pacific Ocean on Crystal Cove state beach. On occasion, I go for runs because as a software developer I find the balance between body and mind to be crucial. I have often said to myself, that as a developer and independent thinker, if I couldn't run more than 1 mile than my mind and my thoughts would be useless.</p>
+
+                <p>Philosophy is one of the major things in my life that continues to push my mental limits. As a self declared existential theologist, I believe it is absolutely crucial to consider the logical conclusions of our thoughts and beliefs. I strongly believe in a God, and have always considered it a great analogy to the systems we build considering how those systems and programs themselves have creators. It seems absolutely clear to me that we must take our rhetoric and language to build a system that allows for our empathy to follow suit. As an engineer, I consider it my responsibility to have conversations with other fellow professionals about the new and upcoming rise of artificial intelligence.</p>
+
+                <p>I want to continue to believe in a world where there are people who want the best for our next generations. I know that it has been argued that today in this world it is objectively better and I would love to continue to believe in this optimism even if that means that we as a species are up against an ever growing uphill. I would rather not have to imagine Sisyphus happy but instead sweating and smiling, remembering that grace is always within arms reach. Especially since so many people pray and think about him. In that same way, I would love to consider us as a species dedicated to sweating and smiling all the more.</p>
+
+                <p>As a professional, I see myself dedicating more time to understanding a world that attempts to bring us down. I continue to advocate for people who share similar backgrounds as me and encourage them to consider a pursuit of knowledge and an application of that knowledge. The work I find myself considering for my future is largely dependent on what I can offer on a technical level, but also a personal one. In the midst of looking at the mud and darkness, I'd love to light a scented candle.</p>
+
+                <p style="font-size: 0.85rem; color: #888; margin-top: 24px; font-style: italic;">This was written by a human. This website was made with the help of said machines.</p>
+            </div>
+
             <div class="pathways">
                 <div class="pathway-card" onclick="showSection('professional')">
                     <h2>Technical & Professional</h2>
-                    <p>Software engineering experience in enterprise systems, data migration, and PLM integration. Three years building scalable solutions for aerospace and defense clients.</p>
+                    <p>Software engineering experience in enterprise PLM integration, graph database modeling, and data migration. Three years building solutions for aerospace and defense clients including Rolls-Royce, Northrop Grumman, and Alcon.</p>
                 </div>
                 <div class="pathway-card" onclick="showSection('research')">
                     <h2>Independent Study</h2>
@@ -432,18 +495,20 @@
                 
                 <div class="job">
                     <div class="job-header">
-                        <span class="job-title">Software Engineer I</span>
-                        <span class="job-date">May 2022 – Present</span>
+                        <span class="job-title">Software Engineer</span>
+                        <span class="job-date">May 2022 – Feb 2026</span>
                     </div>
                     <div class="job-company">eQ Technologic</div>
                     <div class="job-description">
+                        <p class="sub-desc">Enterprise PLM integration and data migration for aerospace and defense clients using the eQube-MI and eQube-BI platform.</p>
                         <ul>
-                            <li>Developed scalable Java-based automation scripts and database structures to streamline metadata and BOM workflows for aerospace and defense clients including Rolls-Royce, Northrop Grumman, and Alcon</li>
-                            <li>Refactored ambiguous legacy codebases using iterator patterns, robust error handling, and clean method structure to improve maintainability and system reliability</li>
-                            <li>Led SAP to Solumina migration project, ensuring seamless BOM transitions and cross-application data integration via OrientDB graph database architecture</li>
-                            <li>Proposed and implemented optimized data filtering using a single hashmap structure on the Rolls-Royce contract—a solution credited with helping close a historically difficult engagement</li>
-                            <li>Built reusable APIs using the eQube-MI framework for PLM integration across complex enterprise environments</li>
-                            <li>Collaborated via pair programming and cross-functional discussions to align evolving requirements with maintainable, production-grade code</li>
+                            <li>Built a multi-level eQube-MI view for the Northrop Grumman engagement that joined Cameo Systems Modeler PLM tables across three levels of parent-child relationships, extracting and merging component attributes into a unified result set — then persisted the output into OrientDB as graph vertices and edges to surface PCB part relationships in a queryable, structured format.</li>
+                            <li>Built a full-stack property management interface for the Alcon engagement using Marionette.js and AJAX calls to eQube-MI, allowing plant-level users to create and update user-defined properties in PLM without direct system access.</li>
+                            <li>Developed a Java-based EDX file processor that parsed XML-structured PLM data using custom eQube library objects, generated updated output files, and packaged them into ZIP archives for downstream migration workflows.</li>
+                            <li>Engineered eQube-BI reports for Rolls-Royce filtering engine and aircraft part data across large PLM datasets, then wrote a Java migration script using a single-pass hashmap to consolidate metadata lookups — eliminating redundant API calls across tens of thousands of records.</li>
+                            <li>Updated component metadata in Siemens Insights Hub (MindSphere) via scripted eQube-MI integrations as part of ongoing Rolls-Royce data governance workflows.</li>
+                            <li>Contributed to the internal out-of-the-box (OOTB) product team, developing Java-based REST APIs handling JSON payloads and extending OrientDB persistence configurations to support eQube-MI's core integration capabilities.</li>
+                            <li>Served as technical point of contact on client engagements with Rolls-Royce, Northrop Grumman, and Alcon, translating complex requirements into working integration solutions.</li>
                         </ul>
                     </div>
                 </div>
@@ -451,15 +516,15 @@
                 <div class="job">
                     <div class="job-header">
                         <span class="job-title">Software Quality Operations Associate</span>
-                        <span class="job-date">Nov 2021 - May 2022</span>
+                        <span class="job-date">Nov 2021 – May 2022</span>
                     </div>
                     <div class="job-company">Waymo (via Akorbi Contract)</div>
                     <div class="job-description">
                         <ul>
-                            <li>Monitored approximately 150 software defects weekly using proprietary simulation tools for autonomous vehicle scenarios</li>
-                            <li>Categorized defects through pattern recognition and model analysis, supporting root cause identification and triage prioritization for safety-critical systems</li>
-                            <li>Compiled detailed bug reports with reproducibility metrics and impact assessments to inform product managers and engineering teams</li>
-                            <li>Flagged complex traffic rule classification issues, elevating them to the broader team for resolution and model refinement</li>
+                            <li>Monitored approximately 150 software defects weekly using proprietary simulation tools for autonomous vehicle scenarios.</li>
+                            <li>Categorized defects through pattern recognition and model analysis, supporting root cause identification and triage prioritization for safety-critical systems.</li>
+                            <li>Compiled detailed bug reports with reproducibility metrics and impact assessments to inform product managers and engineering teams.</li>
+                            <li>Flagged complex traffic rule classification issues, elevating them to the broader team for resolution and model refinement.</li>
                         </ul>
                     </div>
                 </div>
@@ -470,19 +535,19 @@
                 <div class="tech-skills">
                     <div class="skill-category">
                         <h4>Programming Languages</h4>
-                        <p>Java (professional), Python, C++ (academic), C (self-study)</p>
+                        <p>Java (professional), Python, JavaScript, C++ (re-studying), C (self-study), SQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>PLM & Integration</h4>
+                        <p>eQube-MI, eQube-BI, Cameo Systems Modeler, SAP, Oracle</p>
                     </div>
                     <div class="skill-category">
                         <h4>Data Systems</h4>
-                        <p>Oracle, OrientDB (graph databases), Teamcenter PLM, SAP</p>
+                        <p>OrientDB (graph databases), JSON/REST APIs, AJAX, XML processing</p>
                     </div>
                     <div class="skill-category">
                         <h4>Tools & Platforms</h4>
-                        <p>Postman (API testing), Jira, Git, Linux environments</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Web Technologies</h4>
-                        <p>JavaScript, HTML5, CSS3</p>
+                        <p>Git, Jira, Postman, Siemens Insights Hub (MindSphere), Linux</p>
                     </div>
                 </div>
             </div>
@@ -493,7 +558,7 @@
                 <a href="https://bxant.github.io/immersive-fractal-gallery/" class="project-link" target="_blank">Fractal Gallery</a>
                 <a href="https://github.com/bxant" class="project-link" target="_blank">GitHub Portfolio</a>
                 <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
-                    These projects explore mathematical chaos theory, fractal geometry, and computational visualization—bridging technical implementation with philosophical inquiry into pattern, recursion, and emergent complexity.
+                    These projects explore mathematical chaos theory, fractal geometry, and computational visualization — bridging technical implementation with philosophical inquiry into pattern, recursion, and emergent complexity.
                 </p>
             </div>
         </div>
@@ -568,26 +633,13 @@
         </div>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function showSection(section) {
-            // Hide all sections
             document.getElementById('home').style.display = 'none';
             document.getElementById('professional').classList.remove('active');
             document.getElementById('research').classList.remove('active');
-            
-            // Show selected section
             document.getElementById(section).classList.add('active');
         }
 
         function showHome() {
-            // Hide all content sections
-            document.getElementById('professional').classList.remove('active');
-            document.getElementById('research').classList.remove('active');
-            
-            // Show home
-            document.getElementById('home').style.display = 'block';
-        }
-    </script>
-</body>
-</html>
-
+            document.getElem
