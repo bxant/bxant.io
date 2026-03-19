@@ -91,14 +91,6 @@
             margin-bottom: 0;
         }
 
-        .about-placeholder {
-            color: #888;
-            font-style: italic;
-            border-left: 3px solid #FFD200;
-            padding-left: 14px;
-            margin-bottom: 16px;
-        }
-
         /* ── PATHWAYS ── */
         .pathway-section {
             margin: 40px 0;
@@ -443,8 +435,6 @@
             <!-- ABOUT ME -->
             <div class="about-section">
                 <h2>About Me</h2>
-                <!-- Replace the placeholder paragraphs below with your own words. 
-                     The structure is ready — just swap the text. -->
                 <p>Hello, my name is Bryant Flores. I am a first generation Mexican-American professional who grew up in East Los Angeles. I graduated in 2021 with a Bachelor of Science in Computer Science with a specialization in Information from the University of California Irvine. I am a father to three cats and their names are Mochi, Luna, and Kiko (short for Federico). During my free time, you can find me hiking the beautiful mountains of California, camping, and spending time looking at the Pacific Ocean on Crystal Cove state beach. On occasion, I go for runs because as a software developer I find the balance between body and mind to be crucial. I have often said to myself, that as a developer and independent thinker, if I couldn't run more than 1 mile than my mind and my thoughts would be useless.</p>
 
                 <p>Philosophy is one of the major things in my life that continues to push my mental limits. As a self declared existential theologist, I believe it is absolutely crucial to consider the logical conclusions of our thoughts and beliefs. I strongly believe in a God, and have always considered it a great analogy to the systems we build considering how those systems and programs themselves have creators. It seems absolutely clear to me that we must take our rhetoric and language to build a system that allows for our empathy to follow suit. As an engineer, I consider it my responsibility to have conversations with other fellow professionals about the new and upcoming rise of artificial intelligence.</p>
@@ -470,7 +460,7 @@
 
         <!-- Professional Section -->
         <div class="content-section" id="professional">
-            <a href="#" class="back-link" onclick="showHome()">← Back to Home</a>
+            <a href="#" class="back-link" onclick="showHome(); return false;">← Back to Home</a>
             
             <div class="section-header">
                 <h2>Technical & Professional Experience</h2>
@@ -565,7 +555,7 @@
 
         <!-- Research Section -->
         <div class="content-section" id="research">
-            <a href="#" class="back-link" onclick="showHome()">← Back to Home</a>
+            <a href="#" class="back-link" onclick="showHome(); return false;">← Back to Home</a>
             
             <div class="section-header">
                 <h2>Independent Study & Inquiry</h2>
@@ -633,14 +623,21 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function showSection(section) {
             document.getElementById('home').style.display = 'none';
             document.getElementById('professional').classList.remove('active');
             document.getElementById('research').classList.remove('active');
             document.getElementById(section).classList.add('active');
+            window.scrollTo(0, 0);
         }
 
         function showHome() {
-            document.getElem
-
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('professional').classList.remove('active');
+            document.getElementById('research').classList.remove('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
