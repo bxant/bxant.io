@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryant Flores — Software Engineer & Independent Scholar</title>
+    <title>Bryant Flores — Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
@@ -21,7 +21,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -43,9 +42,7 @@
         }
 
         /* ── MASTHEAD ── */
-        .masthead {
-            border-bottom: 3px double var(--border);
-        }
+        .masthead { border-bottom: 3px double var(--border); }
 
         .masthead-top {
             display: flex;
@@ -62,9 +59,7 @@
         .masthead-name-block::after {
             content: '';
             position: absolute;
-            right: 0;
-            top: 20%;
-            bottom: 20%;
+            right: 0; top: 20%; bottom: 20%;
             width: 1px;
             background: var(--border);
         }
@@ -88,10 +83,7 @@
             letter-spacing: -0.02em;
         }
 
-        h1 em {
-            font-style: italic;
-            color: var(--blue);
-        }
+        h1 em { font-style: italic; color: var(--blue); }
 
         .masthead-tagline {
             margin-top: 20px;
@@ -136,7 +128,6 @@
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
-
         .meta-value a:hover { border-color: var(--blue); }
 
         /* ── HERO STATEMENT ── */
@@ -191,13 +182,7 @@
             background: var(--cream);
         }
 
-        /* ── ABOUT ── */
-        .about-brief {
-            margin-bottom: 48px;
-            padding-bottom: 48px;
-            border-bottom: 1px solid var(--border);
-        }
-
+        /* ── SECTION EYEBROW ── */
         .section-eyebrow {
             font-family: 'DM Mono', monospace;
             font-size: 0.65rem;
@@ -206,24 +191,6 @@
             color: var(--gold);
             display: block;
             margin-bottom: 16px;
-        }
-
-        .about-brief p {
-            font-size: 0.95rem;
-            color: var(--ink);
-            margin-bottom: 14px;
-            line-height: 1.8;
-        }
-
-        .about-brief p:last-child { margin-bottom: 0; }
-
-        .human-note {
-            display: block;
-            margin-top: 20px;
-            font-family: 'DM Mono', monospace;
-            font-size: 0.68rem;
-            color: var(--muted);
-            letter-spacing: 0.05em;
         }
 
         /* ── PATHWAY NAV ── */
@@ -263,10 +230,7 @@
         .nav-card.active::before { transform: scaleX(1); }
 
         .nav-card:hover,
-        .nav-card.active {
-            background: var(--ink);
-            color: var(--paper);
-        }
+        .nav-card.active { background: var(--ink); color: var(--paper); }
 
         .nav-card:hover .nav-card-label,
         .nav-card.active .nav-card-label { color: var(--gold-light); }
@@ -320,17 +284,6 @@
             border-bottom: 2px solid var(--gold);
             padding-bottom: 8px;
             margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .resume-block h3::before {
-            content: attr(data-num);
-            font-family: 'DM Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--muted);
-            letter-spacing: 0.1em;
         }
 
         .job {
@@ -338,7 +291,6 @@
             padding-bottom: 32px;
             border-bottom: 1px dashed var(--border);
         }
-
         .job:last-child { border-bottom: none; padding-bottom: 0; }
 
         .job-header {
@@ -402,6 +354,54 @@
             font-size: 0.75rem;
         }
 
+        /* ── CERT BLOCKS ── */
+        .cert-block {
+            padding: 16px 20px;
+            border-left: 3px solid var(--gold);
+            margin-bottom: 16px;
+            background: var(--cream);
+        }
+
+        .cert-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 2px;
+        }
+
+        .cert-issuer {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .cert-detail {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 2px 8px;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .cert-badge.in-progress {
+            border-color: var(--muted);
+            color: var(--muted);
+        }
+
         /* ── SKILLS GRID ── */
         .skills-grid {
             display: grid;
@@ -448,60 +448,96 @@
         .project-pill:hover { background: var(--ink); color: var(--gold-light); }
         .project-pill::after { content: '↗'; font-size: 0.8em; }
 
-        /* ── RESEARCH ── */
-        .research-foundation {
-            padding: 28px 32px;
+        /* ── STUDY PANEL ── */
+        .study-intro {
+            padding: 32px 36px;
             background: var(--blue);
             color: var(--cream);
-            margin-bottom: 32px;
+            margin-bottom: 40px;
             position: relative;
+            overflow: hidden;
         }
 
-        .research-foundation::before {
+        .study-intro::before {
             content: '"';
             position: absolute;
-            top: -10px; left: 24px;
+            top: -20px; right: 24px;
             font-family: 'Playfair Display', serif;
-            font-size: 5rem;
+            font-size: 10rem;
             color: var(--gold);
-            opacity: 0.4;
+            opacity: 0.12;
             line-height: 1;
+            pointer-events: none;
         }
 
-        .research-foundation h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--gold-light);
+        .study-intro p {
+            font-size: 0.92rem;
+            line-height: 1.8;
+            color: #d4ccc0;
+            margin-bottom: 12px;
         }
 
-        .research-foundation p { font-size: 0.85rem; line-height: 1.6; color: #c8c0b4; }
-        .research-foundation ul { margin-top: 12px; padding-left: 20px; }
-        .research-foundation li { font-size: 0.82rem; color: #c8c0b4; margin-bottom: 4px; }
+        .study-intro p:last-child { margin-bottom: 0; }
 
-        .guiding-questions { margin: 32px 0; }
+        .study-intro strong { color: var(--gold-light); font-style: normal; }
+
+        /* ── GUIDING QUESTIONS ── */
+        .guiding-questions { margin: 0 0 40px; }
 
         .question-item {
-            padding: 16px 20px 16px 56px;
+            padding: 18px 24px 18px 60px;
             border-left: 3px solid var(--gold);
             margin-bottom: 12px;
             font-style: italic;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             color: var(--ink);
             position: relative;
             background: var(--cream);
+            line-height: 1.6;
         }
 
         .question-item::before {
             content: attr(data-n);
             position: absolute;
-            left: 16px;
+            left: 18px;
             top: 50%;
             transform: translateY(-50%);
             font-family: 'DM Mono', monospace;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: var(--gold);
+            letter-spacing: 0.1em;
+        }
+
+        /* ── TEXTS GRID ── */
+        .texts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .text-card {
+            padding: 16px;
+            border: 1px solid var(--border);
+            background: var(--cream);
+        }
+
+        .text-card-author {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .text-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.88rem;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.3;
         }
 
         /* ── SIDEBAR ── */
@@ -510,7 +546,6 @@
             padding-bottom: 36px;
             border-bottom: 1px solid var(--border);
         }
-
         .sidebar-section:last-child { border-bottom: none; }
 
         .sidebar-label {
@@ -540,13 +575,40 @@
             margin: 3px 3px 3px 0;
         }
 
+        /* ── ABOUT (bottom) ── */
+        .about-section {
+            padding: 56px;
+            border-top: 3px double var(--border);
+            background: var(--cream);
+        }
+
+        .about-section p {
+            font-size: 0.95rem;
+            color: var(--ink);
+            margin-bottom: 14px;
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        .about-section p:last-of-type { margin-bottom: 0; }
+
+        .human-note {
+            display: block;
+            margin-top: 24px;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+        }
+
         /* ── FOOTER ── */
         footer {
-            border-top: 3px double var(--border);
+            border-top: 1px solid var(--border);
             padding: 24px 56px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: var(--ink);
         }
 
         footer p {
@@ -555,6 +617,8 @@
             color: var(--muted);
             letter-spacing: 0.08em;
         }
+
+        footer a { color: var(--gold); text-decoration: none; }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 900px) {
@@ -576,16 +640,19 @@
             .section-nav { grid-template-columns: 1fr; }
             .nav-card:first-child { border-right: none; border-bottom: 2px solid var(--ink); }
             .skills-grid { grid-template-columns: 1fr; }
+            .texts-grid { grid-template-columns: 1fr 1fr; }
+            .about-section { padding: 36px 28px; }
             footer { padding: 24px 28px; flex-direction: column; gap: 8px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ── MASTHEAD ── -->
     <header class="masthead">
         <div class="masthead-top">
             <div class="masthead-name-block">
-                <span class="masthead-label">Portfolio — Software Engineer & Independent Scholar</span>
+                <span class="masthead-label">Software Engineer & Independent Scholar</span>
                 <h1>Bryant<br><em>Flores</em></h1>
                 <p class="masthead-tagline">First-generation engineer from East Los Angeles. Builder of systems, reader of philosophy, asker of uncomfortable questions.</p>
             </div>
@@ -617,34 +684,37 @@
         <div class="hero-statement">
             <span class="hero-number">∞</span>
             <p class="hero-text">
-                Software engineer with <strong>three years of enterprise integration experience</strong> across aerospace and defense —
-                building data pipelines, graph database models, and PLM solutions for
+                Software engineer with <strong>four years of enterprise integration experience</strong> across aerospace and defense —
+                building data pipelines, REST APIs, and PLM solutions for
                 <strong>Rolls-Royce, Northrop Grumman, and Alcon.</strong>
+                Currently completing <strong>embedded systems certificates</strong> with Arm on edX.
             </p>
         </div>
     </header>
 
+    <!-- ── ABOUT ── -->
+    <section class="about-section">
+        <span class="section-eyebrow">// about</span>
+        <p>Hello, my name is Bryant Flores. I am a first generation Mexican-American professional who grew up in East Los Angeles. I graduated in 2021 with a Bachelor of Science in Computer Science with a specialization in Information from the University of California Irvine. I am a father to three cats and their names are Mochi, Luna, and Kiko (short for Federico). During my free time, you can find me hiking the beautiful mountains of California, camping, and spending time looking at the Pacific Ocean on Crystal Cove state beach. On occasion, I go for runs because as a software developer I find the balance between body and mind to be crucial. I have often said to myself, that as a developer and independent thinker, if I couldn't run more than 1 mile than my mind and my thoughts would be useless.</p>
+        <p>Philosophy is one of the major things in my life that continues to push my mental limits. As a self declared existential theologist, I believe it is absolutely crucial to consider the logical conclusions of our thoughts and beliefs. I strongly believe in a God, and have always considered it a great analogy to the systems we build considering how those systems and programs themselves have creators. It seems absolutely clear to me that we must take our rhetoric and language to build a system that allows for our empathy to follow suit. As an engineer, I consider it my responsibility to have conversations with other fellow professionals about the new and upcoming rise of artificial intelligence.</p>
+        <p>I would rather not have to imagine Sisyphus happy but instead sweating and smiling, remembering that grace is always within arms reach. I would love to consider us as a species dedicated to sweating and smiling all the more — and in the midst of looking at the mud and darkness, I'd love to light a scented candle.</p>
+        <span class="human-note">// written by a human — website built with the help of said machines</span>
+    </section>
+
     <div class="site-body">
         <main class="main-content">
 
-            <div class="about-brief">
-                <span class="section-eyebrow">// about</span>
-                <p>Hello, my name is Bryant Flores. I am a first generation Mexican-American professional who grew up in East Los Angeles. I graduated in 2021 with a Bachelor of Science in Computer Science with a specialization in Information from the University of California Irvine. I am a father to three cats and their names are Mochi, Luna, and Kiko (short for Federico). During my free time, you can find me hiking the beautiful mountains of California, camping, and spending time looking at the Pacific Ocean on Crystal Cove state beach. On occasion, I go for runs because as a software developer I find the balance between body and mind to be crucial. I have often said to myself, that as a developer and independent thinker, if I couldn't run more than 1 mile than my mind and my thoughts would be useless.</p>
-                <p>Philosophy is one of the major things in my life that continues to push my mental limits. As a self declared existential theologist, I believe it is absolutely crucial to consider the logical conclusions of our thoughts and beliefs. I strongly believe in a God, and have always considered it a great analogy to the systems we build considering how those systems and programs themselves have creators. It seems absolutely clear to me that we must take our rhetoric and language to build a system that allows for our empathy to follow suit. As an engineer, I consider it my responsibility to have conversations with other fellow professionals about the new and upcoming rise of artificial intelligence.</p>
-                <p>I would rather not have to imagine Sisyphus happy but instead sweating and smiling, remembering that grace is always within arms reach. I would love to consider us as a species dedicated to sweating and smiling all the more — and in the midst of looking at the mud and darkness, I'd love to light a scented candle.</p>
-                <span class="human-note">// written by a human — website built with the help of said machines</span>
-            </div>
-
+            <!-- ── NAV ── -->
             <div class="section-nav">
                 <div class="nav-card active" id="nav-professional" onclick="switchPanel('professional')">
-                    <span class="nav-card-label">01 — Work</span>
+                    <span class="nav-card-label">Work</span>
                     <div class="nav-card-title">Technical & Professional</div>
-                    <p class="nav-card-desc">PLM integration, graph databases, aerospace & defense clients.</p>
+                    <p class="nav-card-desc">PLM integration, REST APIs, embedded systems — aerospace & defense clients.</p>
                 </div>
                 <div class="nav-card" id="nav-research" onclick="switchPanel('research')">
-                    <span class="nav-card-label">02 — Study</span>
+                    <span class="nav-card-label">Study</span>
                     <div class="nav-card-title">Independent Inquiry</div>
-                    <p class="nav-card-desc">Philosophy, technology ethics, and the questions that follow me home.</p>
+                    <p class="nav-card-desc">Two years of philosophy, self-directed — and the questions it left behind.</p>
                 </div>
             </div>
 
@@ -652,159 +722,187 @@
             <div class="content-panel active" id="panel-professional">
 
                 <div class="resume-block">
-                    <h3 data-num="01 —">Education</h3>
+                    <h3>Education & Certificates</h3>
+
                     <div class="job">
                         <div class="job-header">
                             <span class="job-title">B.S. Computer Science — Information Specialization</span>
                             <span class="job-date">Jun 2021</span>
                         </div>
-                        <div class="job-company">University of California, Irvine · GPA 3.01</div>
+                        <div class="job-company">University of California, Irvine</div>
                         <ul>
                             <li>Coursework: Backend Development, Operating Systems, System Design, OOP, Logic & Formal Methods</li>
                             <li>Dean's Honor Roll — three occasions</li>
                         </ul>
                     </div>
+
+                    <div class="cert-block">
+                        <div class="cert-name">Embedded Systems Essentials with Arm: Getting Started</div>
+                        <div class="cert-issuer">Arm / edX · Completed May 2026</div>
+                        <div class="cert-detail">Digital I/O, interrupts, finite state machines, ADC/DAC, PWM — hands-on C development on the NXP LPC1768</div>
+                        <span class="cert-badge">Completed</span>
+                    </div>
+
+                    <div class="cert-block">
+                        <div class="cert-name">Embedded Systems Essentials with Arm: Get Practical with Hardware</div>
+                        <div class="cert-issuer">Arm / edX · Expected Jul 2026</div>
+                        <div class="cert-detail">NUCLEO-F401RE, SPI, shift registers, sensors, real-time peripheral control in C</div>
+                        <span class="cert-badge in-progress">In Progress</span>
+                    </div>
                 </div>
 
                 <div class="resume-block">
-                    <h3 data-num="02 —">Experience</h3>
+                    <h3>Experience</h3>
 
                     <div class="job">
                         <div class="job-header">
                             <span class="job-title">Software Engineer</span>
-                            <span class="job-date">May 2022 – Feb 2026</span>
+                            <span class="job-date">2022 – 2026</span>
                         </div>
                         <div class="job-company">eQ Technologic</div>
-                        <p class="job-subdesc">Enterprise PLM integration and data migration for aerospace and defense using the eQube-MI and eQube-BI platform.</p>
+                        <p class="job-subdesc">Enterprise PLM integration and data migration for aerospace and defense clients using the eQube-MI and eQube-BI platform.</p>
                         <ul>
-                            <li>Built a multi-level eQube-MI view for Northrop Grumman joining Cameo PLM tables across three parent-child levels, persisting output into OrientDB as graph vertices and edges to surface PCB part relationships in a queryable format.</li>
-                            <li>Built a full-stack property management interface for Alcon using Marionette.js and AJAX to eQube-MI, allowing plant-level users to create and update user-defined properties in PLM without direct system access.</li>
-                            <li>Developed a Java-based EDX file processor that parsed XML-structured PLM data, generated updated output files, and packaged them into ZIP archives for downstream migration workflows.</li>
-                            <li>Engineered eQube-BI reports for Rolls-Royce filtering engine and aircraft part data, then wrote a Java migration script using a single-pass hashmap to eliminate redundant API calls across tens of thousands of records.</li>
-                            <li>Updated component metadata in Siemens Insights Hub (MindSphere) via scripted eQube-MI integrations as part of Rolls-Royce data governance workflows.</li>
-                            <li>Contributed to the internal OOTB product team — Java REST APIs, JSON payloads, OrientDB persistence configuration for eQube-MI's core integration layer.</li>
-                            <li>Served as technical point of contact for Rolls-Royce, Northrop Grumman, and Alcon engagements, translating complex requirements into working solutions.</li>
+                            <li>Built a full-stack property management tool for Alcon using JavaScript, Marionette.js, and AJAX with JSON payloads to a REST backend via eQube-MI — giving plant-level users a self-service browser UI to create and update PLM properties without admin intervention.</li>
+                            <li>Designed and implemented Java REST APIs handling JSON payloads, connecting custom business logic to OrientDB graph database persistence to extend eQube-MI's integration platform for clients including Northrop Grumman and Rolls-Royce.</li>
+                            <li>Led a team of 7 engineers on a SAP-to-Solumina migration, using eQube-MI as the integration intermediary — coordinating Java REST API development, SQL-based data validation, and JSON payload mapping so factory operations teams could transition to a unified manufacturing system.</li>
+                            <li>Built multi-level SQL-style data views in eQube-MI for Northrop Grumman, joining PLM object tables across three levels of parent-child relationships, then persisted the merged output into OrientDB as graph vertices and edges — so engineers could query PCB component dependencies without digging through raw PLM exports.</li>
+                            <li>Engineered a Java migration script using a single-pass hashmap to consolidate metadata lookups for Rolls-Royce part data, eliminating redundant REST API calls across tens of thousands of records.</li>
+                            <li>Developed a Java XML file processor using object-oriented design to parse and update PLM data in EDX format, packaging results into ZIP archives and automating a previously manual handoff step in the migration workflow.</li>
                         </ul>
                     </div>
 
                     <div class="job">
                         <div class="job-header">
                             <span class="job-title">Software Quality Operations Associate</span>
-                            <span class="job-date">Nov 2021 – May 2022</span>
+                            <span class="job-date">2021 – 2022</span>
                         </div>
                         <div class="job-company">Waymo · via Akorbi Contract</div>
                         <ul>
-                            <li>Monitored ~150 software defects weekly using proprietary simulation tools for autonomous vehicle scenarios.</li>
-                            <li>Categorized defects through pattern recognition and model analysis, supporting root cause identification for safety-critical systems.</li>
-                            <li>Compiled bug reports with reproducibility metrics and impact assessments for PMs and engineering teams.</li>
-                            <li>Flagged complex traffic rule classification issues, elevating them to the broader team for model refinement.</li>
+                            <li>Triaged ~150 software defects weekly using proprietary simulation tools, categorizing autonomous vehicle behavior failures so the engineering team could prioritize which bugs posed real-world safety risks.</li>
+                            <li>Produced structured defect reports with reproducibility steps and impact assessments, giving PMs and engineers the context needed to act on issues without re-running simulations from scratch.</li>
+                            <li>Escalated complex traffic rule classification edge cases to the engineering team, contributing to model refinements that improved the vehicle's decision-making in ambiguous real-world scenarios.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="resume-block">
-                    <h3 data-num="03 —">Technical Skills</h3>
+                    <h3>Technical Skills</h3>
                     <div class="skills-grid">
                         <div class="skill-block">
                             <h4>Languages</h4>
-                            <p>Java (professional), Python, JavaScript, C++ (re-studying), C (self-study), SQL</p>
+                            <p>Java, JavaScript, SQL, XML, Python, C (in progress)</p>
                         </div>
                         <div class="skill-block">
-                            <h4>PLM & Integration</h4>
-                            <p>eQube-MI, eQube-BI, Cameo Systems Modeler, SAP, Oracle</p>
+                            <h4>Backend & APIs</h4>
+                            <p>REST API design, JSON, Node.js, Express, AJAX, OOP</p>
                         </div>
                         <div class="skill-block">
-                            <h4>Data Systems</h4>
-                            <p>OrientDB, JSON/REST APIs, AJAX, XML processing</p>
+                            <h4>Data & Integration</h4>
+                            <p>OrientDB, eQube-MI, eQube-BI, SAP, Solumina, Cameo Systems Modeler, Siemens Insights Hub</p>
                         </div>
                         <div class="skill-block">
-                            <h4>Tools & Platforms</h4>
-                            <p>Git, Jira, Postman, Siemens Insights Hub, Linux</p>
+                            <h4>Tools & Embedded</h4>
+                            <p>Git, Linux, Keil Studio, Mbed, NXP LPC1768, NUCLEO-F401RE</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="resume-block">
-                    <h3 data-num="04 —">Projects</h3>
-                    <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 16px;">A full-stack camping trip planner built with React and Node/Express.</p>
-                    <div class="job" style="margin-bottom: 24px; padding-bottom: 24px;">
+                    <h3>Projects</h3>
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="job-title">Happy Camper</span>
+                            <span class="job-date">2024 – present</span>
+                        </div>
+                        <div class="job-company">React · Node.js · Express · Google OAuth</div>
                         <ul>
-                            <li>Built a full-stack camping trip planning app — React frontend with a Node/Express backend proxy to protect API keys, integrated with the Recreation.gov API for live campground search and the Overpass (OpenStreetMap) API for nearby trail data.</li>
-                            <li>Integrated Google OAuth 2.0 and the Google Sheets API so users can authenticate and write generated trip itineraries directly into their own spreadsheet template.</li>
-                            <li>Architected with strict file separation and single-responsibility services — each external API in its own module, keeping the codebase maintainable as features scale.</li>
+                            <li>Built a full-stack campsite planning app with a React frontend and Node/Express backend proxy, integrating the Recreation.gov API and Google OAuth so users can search and organize campsite reservations without exposing API keys client-side.</li>
+                            <li>Designed a service-separated backend architecture where each integration lives in its own module — keeping the codebase maintainable as features scale.</li>
                         </ul>
-                    </div>
-                    <div class="project-row" style="margin-top: 0; margin-bottom: 32px;">
-                        <a href="https://github.com/bxant/happy-camper" class="project-pill" target="_blank">Happy Camper — Repo</a>
-                    </div>
-                    <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 16px;">Explorations of chaos theory and fractal mathematics — technical implementation meeting questions about pattern, recursion, and emergent complexity.</p>
-                    <div class="project-row">
-                        <a href="https://bxant.github.io/fractal-chaos-simulator/" class="project-pill" target="_blank">Chaos Simulator</a>
-                        <a href="https://bxant.github.io/immersive-fractal-gallery/" class="project-pill" target="_blank">Fractal Gallery</a>
-                        <a href="https://github.com/bxant" class="project-pill" target="_blank">GitHub</a>
+                        <div class="project-row" style="margin-top: 16px;">
+                            <a href="https://github.com/bxant/happy-camper" class="project-pill" target="_blank">Repo</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- ── RESEARCH PANEL ── -->
+            <!-- ── STUDY PANEL ── -->
             <div class="content-panel" id="panel-research">
 
-                <div class="resume-block">
-                    <h3 data-num="01 —">Course of Study</h3>
-
-                    <div class="research-foundation">
-                        <h4>Michael Sugrue & Darren Staloff — "Great Minds of the Western Intellectual Tradition"</h4>
-                        <p>Complete lecture series spanning 3,000 years of Western philosophy from ancient Greece through 20th-century critical theory.</p>
-                        <ul>
-                            <li>Ancient: Plato, Aristotle, Stoicism</li>
-                            <li>Medieval: Augustine, Aquinas, scholasticism</li>
-                            <li>Enlightenment: Machiavelli, Descartes, Hobbes, Locke, Kant</li>
-                            <li>Modern: Hegel, Marx, Nietzsche, existentialism</li>
-                            <li>20th century: Phenomenology, critical theory, postmodernism</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <div class="job-title" style="margin-bottom: 12px;">Primary Texts</div>
-                        <ul>
-                            <li>Marcus Aurelius — <em>Meditations</em></li>
-                            <li>Epictetus — <em>Enchiridion</em> and <em>Discourses</em></li>
-                            <li>The Gospels</li>
-                        </ul>
-                    </div>
+                <div class="study-intro">
+                    <p>Over roughly two years — between 2022 and 2024, while working full-time — I worked through Michael Sugrue and Darren Staloff's <strong>"Great Minds of the Western Intellectual Tradition,"</strong> a lecture series covering 3,000 years of philosophy from ancient Greece through 20th-century critical theory.</p>
+                    <p>I didn't follow a syllabus. I watched lectures and wrote. The philosophy became the interpretive framework through which I read everything else — novels from a book club, theology, the Gospels, Stoic texts. The questions it raised are ones I'm still sitting with.</p>
                 </div>
 
                 <div class="resume-block">
-                    <h3 data-num="02 —">Guiding Questions</h3>
+                    <h3>The Questions That Followed</h3>
                     <div class="guiding-questions">
                         <div class="question-item" data-n="Q1">"Who builds AI systems versus who experiences their consequences?"</div>
-                        <div class="question-item" data-n="Q2">"What does technological literacy look like in a modern world, and how do we reshape critical thinking skills?"</div>
+                        <div class="question-item" data-n="Q2">"What does technological literacy look like in communities that lack the infrastructure to engage with it on their own terms?"</div>
                         <div class="question-item" data-n="Q3">"How do we talk about AI ethics in communities that lack the technical background to understand what these systems are?"</div>
-                        <div class="question-item" data-n="Q4">"What responsibility do engineers have to the communities their work affects?"</div>
+                        <div class="question-item" data-n="Q4">"What responsibility do engineers have to the people their systems were never designed around?"</div>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--muted); font-style: italic; line-height: 1.7; margin-top: 8px;">These questions sit at the intersection of my engineering background, my philosophical reading, and my own experience as a first-generation Mexican-American professional who understands both how these systems are built and what it feels like to be outside the rooms where they're designed.</p>
+                </div>
+
+                <div class="resume-block">
+                    <h3>What I Read</h3>
+                    <div class="texts-grid">
+                        <div class="text-card">
+                            <span class="text-card-author">Marcus Aurelius</span>
+                            <div class="text-card-title">Meditations</div>
+                        </div>
+                        <div class="text-card">
+                            <span class="text-card-author">Epictetus</span>
+                            <div class="text-card-title">Enchiridion & Discourses</div>
+                        </div>
+                        <div class="text-card">
+                            <span class="text-card-author">The Gospels</span>
+                            <div class="text-card-title">Matthew, Mark, Luke, John</div>
+                        </div>
+                        <div class="text-card">
+                            <span class="text-card-author">James Gleick</span>
+                            <div class="text-card-title">Chaos: Making a New Science</div>
+                        </div>
+                        <div class="text-card">
+                            <span class="text-card-author">Don DeLillo</span>
+                            <div class="text-card-title">White Noise</div>
+                        </div>
+                        <div class="text-card">
+                            <span class="text-card-author">Gabriel García Márquez</span>
+                            <div class="text-card-title">One Hundred Years of Solitude</div>
+                        </div>
+                        <div class="text-card">
+                            <span class="text-card-author">Fernanda Melchor</span>
+                            <div class="text-card-title">Hurricane Season</div>
+                        </div>
+                        <div class="text-card">
+                            <span class="text-card-author">Juan Rulfo</span>
+                            <div class="text-card-title">Pedro Páramo</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="resume-block">
-                    <h3 data-num="03 —">Focus & Current Engagement</h3>
-                    <p style="font-size: 0.9rem; margin-bottom: 16px; color: var(--ink);">My study concentrated on questions at the intersection of technology and ethics — examined through the lens of a first-generation Mexican-American engineer who understands both how technical systems function and how they impact underrepresented communities.</p>
-                    <p style="font-size: 0.9rem; margin-bottom: 16px; color: var(--ink);">Recent conversations with faculty and professionals have explored the intersection of large language models and weapons technology, technological literacy gaps, and the unequal distribution of AI's benefits and harms. These discussions confirm the value of perspectives that bridge technical capability with lived experience outside mainstream technology development.</p>
-                    <div class="project-row" style="margin-top: 24px;">
-                        <a href="https://bxant.github.io/fractal-chaos-simulator/" class="project-pill" target="_blank">Chaos Simulator</a>
-                        <a href="https://bxant.github.io/immersive-fractal-gallery/" class="project-pill" target="_blank">Fractal Gallery</a>
-                    </div>
+                    <h3>Where It Points</h3>
+                    <p style="font-size: 0.9rem; color: var(--ink); line-height: 1.8; margin-bottom: 14px;">I'm pursuing PhD programs in informatics, HCI, and AI ethics. The question I keep returning to is what it means to build systems for people those systems were never designed around. That question requires both technical fluency and the kind of contextual knowledge that comes from being inside communities that are often only studied from the outside.</p>
+                    <p style="font-size: 0.9rem; color: var(--ink); line-height: 1.8; margin-bottom: 14px;">Recent conversations with faculty have explored LLMs and weapons technology, technological literacy gaps, and the unequal distribution of AI's benefits and harms. The philosophy didn't give me answers. It gave me better questions — and the patience to sit with them.</p>
+                    <p style="font-size: 0.9rem; color: var(--ink); line-height: 1.8;">In 2024, I served as a judge for the UCI Donald Bren School of ICS Senior Capstone Expo — evaluating student projects across software engineering and human-computer interaction. It was a reminder that the best technical work always has a person on the other end of it.</p>
                 </div>
 
             </div>
         </main>
 
+        <!-- ── SIDEBAR ── -->
         <aside class="sidebar">
             <div class="sidebar-section">
                 <span class="sidebar-label">// currently</span>
                 <ul>
-                    <li>Open to new engineering roles</li>
-                    <li>Building Happy Camper (React + Node)</li>
-                    <li>Studying C fundamentals</li>
+                    <li>Open to engineering roles</li>
+                    <li>Arm embedded systems certs (edX)</li>
+                    <li>Studying C — Learn C the Hard Way</li>
+                    <li>PhD applications, fall 2026</li>
                 </ul>
             </div>
 
@@ -815,11 +913,10 @@
                     <span class="interest-tag">camping</span>
                     <span class="interest-tag">running</span>
                     <span class="interest-tag">guitar</span>
+                    <span class="interest-tag">choir</span>
                     <span class="interest-tag">philosophy</span>
                     <span class="interest-tag">theology</span>
                     <span class="interest-tag">stoicism</span>
-                    <span class="interest-tag">chaos theory</span>
-                    <span class="interest-tag">fractals</span>
                     <span class="interest-tag">Crystal Cove</span>
                 </div>
             </div>
@@ -834,23 +931,15 @@
             </div>
 
             <div class="sidebar-section">
-                <span class="sidebar-label">// reading</span>
-                <ul>
-                    <li>Marcus Aurelius — Meditations</li>
-                    <li>The Gospels</li>
-                    <li>Sapolsky — Behave</li>
-                </ul>
-            </div>
-
-            <div class="sidebar-section">
                 <span class="sidebar-label">// background</span>
                 <p>East Los Angeles → UC Irvine → aerospace & defense software → what comes next.</p>
             </div>
         </aside>
     </div>
 
+    <!-- ── FOOTER ── -->
     <footer>
-        <p>Bryant Flores · Irvine, CA · <a href="mailto:bryant.flores.07@gmail.com" style="color: var(--gold); text-decoration: none;">bryant.flores.07@gmail.com</a></p>
+        <p>Bryant Flores · Irvine, CA · <a href="mailto:bryant.flores.07@gmail.com">bryant.flores.07@gmail.com</a></p>
         <p>built with intention · © 2026</p>
     </footer>
 
